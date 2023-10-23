@@ -1,0 +1,54 @@
+@import "../../scssCommon/Common";
+
+.modal-update {
+    @include modal;
+
+    .update-form {
+        @include mini-form;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+
+        h3 {
+            margin: 0;
+            font-size: 22px
+        }
+
+        label {
+            @include label;
+        }
+
+        input {
+            @include input;
+        }
+
+        div{
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+                @include btn;
+                margin-top: 15px;
+            }
+
+            button:nth-child(1) {
+                margin-right: 10px;
+                @include bg-confirm;
+            }
+
+            button:nth-child(2) {
+                background-color: $bg-close;
+            }
+
+            button:nth-child(1):hover {
+                background-color: $hover-confirm;
+            }
+
+            button:nth-child(2):hover {
+                background-color: $hover-close;
+            }
+
+        }
+    }
+}
+

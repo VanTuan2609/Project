@@ -1,0 +1,224 @@
+@import "../../scssCommon/Common";
+
+div{
+    .container-manage {
+        display: flex;
+        height: 70vh;
+        width: 100%;
+        
+        .manage-wrap {
+            @include large-form;
+            position: absolute;
+            left: 110px;
+            top: 180px;
+            background-image: linear-gradient(to right, #e1fab6, #d4fcda);
+    
+            .heading {
+                @include flex-between;
+                border-bottom: 2px solid black;
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+                i {
+                    margin-right: 7px;
+                }
+                h3 {
+                    margin: 0;
+                    font-size: 26px;
+                }
+                div {
+                    gap: 12px;
+                    display: flex;
+                    align-items: center;
+                    .btn-add {
+                        @include btn;
+                        background-color: $bg-confirm;
+                        color: $white-text;
+                        width: 131px;
+                        padding: 7px 0;
+                        &:hover {
+                            background-color: $hover-confirm
+                        }
+                    }
+                    
+                    .export {
+                        @include btn;
+                        @include flex-center;
+                        background-color: $bg-export;
+                        color: $white-text;
+                        text-decoration: none;
+                        &:hover {
+                            background-color: $hover-export
+                        }
+                    }
+
+                    .import {
+                        @include btn;
+                        @include flex-center;
+                        background-color: $bg-import;
+                        color: $white-text;
+                        &:hover {
+                            background-color: $hover-import
+                        }
+                    }
+                }
+            }
+            .list {
+                display: flex;
+    
+                table {
+                    width: 100%;
+                    // border-collapse: collapse;
+                    thead {
+                        .head-table {
+                            .table-col {
+                                border: 2px solid black;
+                                padding: 7px;
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    tbody tr:nth-child(odd) {
+                        background-color: #b2ff8587;
+                    }
+                    
+                    tbody {
+                        tr {
+                            td {
+                                padding: 3px;
+                                border: 2px solid black;
+                                text-align: center;
+                            }
+    
+                            .operation {
+                                display: flex;
+                                justify-content: center;
+    
+                                .update-btn {
+                                    @include btn;
+                                    background-color: $bg-update;
+                                    margin-right: 10px;
+                                    i{
+                                        margin-right: 10px;
+                                    }
+                                }
+    
+                                .delete-btn{
+                                    @include btn;
+                                    background-color: $bg-delete;
+                                    i{
+                                        margin-right: 10px;
+                                    }
+                                }
+    
+                                .update-btn:hover {
+                                    background-color: $hover-update;
+                                }
+    
+                                .delete-btn:hover {
+                                    background-color: $hover-delete;
+                                }
+                            }
+                        }
+                    }
+                
+                }
+            }
+        }
+
+        .manage-option {
+            @include mini-form;
+            position: absolute;
+            right: 110px;
+            top: 40%;
+            box-shadow: 20px 30px 10px #ccc;
+            background-image: linear-gradient(to right, #e1fab6, #d4fcda);
+            h3 {
+                margin: 0;
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+            .search-wrap {
+                .search {
+                    display: flex;
+                    align-items: center;
+                    background-color: #fff;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    margin-bottom: 15px;
+                    cursor: pointer;
+                    i {
+                        margin: 0 10px;
+                    }
+                    input {
+                        @include input;
+                        outline: none;
+                        border: none;
+                        flex:1;
+                    }
+                }
+            }
+            .sort-wrap {
+                fieldset {
+                    background-color: #fff;
+                    border-radius: 5px
+                }
+                .list-wrap {
+                    display: flex;
+                    justify-content: space-around;
+                }
+            }
+        }
+    }
+    .modal {
+        @include modal;
+    
+        .add-new {
+            @include mini-form;
+            background-color: #fff;
+    
+            h3 {
+                font-size: 20px;
+                margin: 0;
+            }
+    
+            .add-new-wrap{
+                display: flex;
+                flex-direction: column;
+                
+                label {
+                    @include label;
+                }
+                
+                input {
+                    @include input;
+                }
+            }
+        }
+        .btn-wrap {
+            display: flex;
+            justify-content: flex-end;
+    
+            button{
+                @include btn;
+                margin-top: 20px;
+            }
+    
+            button:nth-child(1) {
+                @include bg-confirm;
+                margin-right: 20px;
+            }
+    
+            button:nth-child(1):hover {
+                background-color: $hover-confirm;
+            }
+    
+            button:nth-child(2) {
+                background-color: $bg-close;
+            }
+            
+            button:nth-child(2):hover {
+                background-color: $hover-close;
+            }
+        }
+    }
+}

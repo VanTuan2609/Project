@@ -1,0 +1,39 @@
+@import "../../scssCommon/Common";
+
+.modal-delete {
+    @include modal;
+    .delete-form {
+        @include mini-form;
+        background-color: #fff;
+        h3 {
+            margin: 0;
+            font-size: 22px;
+        }
+        p{
+            b{
+                font-size: 18px;
+            }
+        }
+        div{
+            display: flex;
+            justify-content: flex-end;
+            button{
+                @include btn;
+            }
+            button:nth-child(1) {
+                margin-right: 10px;
+                @include bg-confirm
+            }
+            button:nth-child(2) {
+                background-color: $bg-close;
+            }
+            button:nth-child(1):hover {
+                background-color: $hover-confirm;
+            }
+            button:nth-child(2):hover {
+                background-color: $hover-close;
+                
+            }
+        }
+    }
+}

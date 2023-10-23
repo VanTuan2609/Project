@@ -1,0 +1,86 @@
+@import "../../scssCommon/Common";
+
+.container-login {
+    @include flex-center;
+    position: relative;
+    height: 70vh;
+    width: 100vw;
+
+    .background {
+        img {
+            position: absolute;
+            left: 30.2%;
+            top: 26%;
+            width: 120px;
+        }
+    }
+
+    .Login-form {
+        @include mini-form;
+        border-top-left-radius: 17px;
+        border-bottom-right-radius:17px ;
+        background-image: linear-gradient(to right, #aaeee6, #cdea9a);
+        box-shadow: 20px 30px 10px #ccc;
+
+        .header-form {
+            h1{
+                margin: 0 0 35px 0;
+                font-size: 28px;
+            }
+        }
+
+        .input-wrap:nth-child(1) {
+            .form-label{
+                margin-right: 32px;
+            }
+        }
+
+        .input-wrap {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            .form-label {
+                margin-bottom: 10px;
+            }
+
+            .form-control {
+                @include input;
+                padding: 10px;
+                margin-bottom: 15px;
+            }
+
+            i {
+                cursor: pointer;
+                position: absolute;
+                right: 10px;
+                top: 12px;
+            }
+        }
+
+        .btn-wrap {
+            display: flex;
+            margin: 10px 0;
+
+            .submit-btn {
+                flex:1;
+                @include btn;
+            }
+
+            .active {
+                flex:1;
+                @include bg-confirm;
+                @include btn;
+
+                &:hover {
+                    background-color: $hover-confirm
+                }
+            }
+            
+            button[disabled = disabled], button:disabled {
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,51 @@
+@import "../../scssCommon/Common";
+
+.container-infor {
+    @include flex-center;
+    height: 71vh;
+    width: 100vw;
+    .row {
+        @include large-form;
+        display: flex;
+        overflow-y: auto;
+        background-image: linear-gradient(to right, #b1ddf6, #D7EDE2);
+        
+        .wrap1 {
+            width: 25%;
+            margin-right: 15px;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            h3 {
+                font-size: 22px;
+                margin: 10px;
+            }
+            .input-infor {
+                display: flex;
+                flex-direction: column;
+                .label {
+                    @include label
+                }
+                .content {
+                    @include input;
+                }
+            }
+        }
+        .wrap2 {
+            width: 75%;
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 5px;
+
+            table {
+                width: 100%;
+            }
+            .head-table {
+                line-height: 28px;
+                .table-col{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.navbar {
+    float: right;
+    background-color: red;
+    border-bottom-left-radius: 10px ;
+    background: linear-gradient(0.32turn, #f5f9e1, #c9f4c7, #E8F5C8);
+    z-index: 10;
+    .listitem {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
+        .item:nth-child(1) {
+            border-right: 1px solid #aba8a8 ;
+        }
+        .item:nth-child(2) {
+            border-right: 1px solid #aba8a8 ;
+        }
+        .item:nth-child(3) {
+            border-right: 1px solid #aba8a8 ;
+        }
+        .item {
+            margin: 10px 0;
+            font-size: 17px;
+            padding: 0px 10px;
+            width: 80px;
+            text-align: center;
+            a{
+                text-decoration: none;
+                color: black ;
+            }
+
+            .highlight {
+                font-weight: 600;
+            }
+        }
+    }
+}

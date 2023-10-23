@@ -1,0 +1,86 @@
+//back-ground
+$bg-confirm : green;
+
+@mixin bg-confirm {
+    background-color: $bg-confirm;
+    color:white
+}
+$white-text : #fff;
+$bg-close : rgba(0, 0, 0, 0.2);
+$bg-update : rgb(246, 246, 95);
+$bg-delete : rgba(255, 0, 0, 0.878);
+$bg-export : rgb(0, 119, 255);
+$bg-import : rgb(255, 140, 0);
+$hover-confirm : rgba(0, 128, 0, 0.5);
+$hover-close : rgba(0, 0, 0, 0.081);
+$hover-update : rgba(255, 255, 0, 0.5);
+$hover-delete : rgba(255, 0, 0, 0.5);
+$hover-export : rgba(0, 119, 255, 0.5);
+$hover-import : rgba(255, 140, 0, 0.5);
+
+//input
+@mixin input {
+    padding: 5px 15px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid #ccc;
+    outline: none;
+    flex: 1;
+}
+
+//label
+@mixin label {
+    margin: 10px 0 5px 0;
+}
+
+//modal 
+@mixin modal {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+//btn
+@mixin btn {
+    padding: 6px 12px;
+    width: 80px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+//flex
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+//form
+
+@mixin mini-form {
+    width: 350px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+}
+
+@mixin large-form {
+    border-radius: 7px;
+    width: 800px;
+    height: 440px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 20px 30px 10px #ccc;
+}

@@ -1,0 +1,44 @@
+@import "../../scssCommon/Common";
+
+body {
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.header {
+    @include flex-between ;
+    background-image: linear-gradient(0.32turn, rgba(245, 249, 225, 0.088), #c9f4c7c1, rgba(232, 245, 200, 0.433)),url(../../img/bg1.jpg);
+    height: 130px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0 5px 20px #E8F5C8;
+    padding: 0px 25px;
+
+    .logo {
+        img {
+            width: 160px;
+            height: 160px;
+            padding-left: 200px;
+        }
+    }
+
+    .header-wrap {
+        display: flex;
+        flex-direction: column;
+
+        .label {
+            font-size: 26px;
+            font-weight: 700;
+        }
+        
+        .user-wrap {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 50px;
+            font-size: 18px;
+        }
+    }
+}
